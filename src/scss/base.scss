@@ -1,0 +1,154 @@
+@import './reset.scss';
+@import './checkboxes.scss';
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("../assets/fonts/SuisseIntl-Light.woff") format('woff');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("../assets/fonts/SuisseIntl.woff") format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("../assets/fonts/SuisseIntl-SemiBold.woff") format('woff');
+    font-weight: 600;
+}
+
+$font-normal:#2e2e2e !important;
+$font-light:#fff !important;
+$font-accent:#3db565 !important;
+.text-normal{
+    color: $font-normal;
+}
+.text-light{
+    color: $font-light;
+}
+.text-accent{
+    color: $font-accent;
+}
+.bg-dark{
+    background-color: $font-normal;
+    
+}
+
+*,p{
+    line-height: 25px;
+}
+a,a:visited,a:hover{
+    transition: all .3s ease;
+    text-decoration: none;
+    color: inherit;
+    width: max-content;
+}
+body{
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 30px;
+}
+.pattern{
+    background: url('../assets/images/pattern.png');
+    background-size: 80%;
+}
+#app{
+
+}
+.gmap{
+    min-height: 480px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.accent{
+    color: $font-accent;
+}
+.dark-bg{
+    background-color: $font-normal;
+    color: $font-light;
+}
+.tel-accent{
+    color: $font-accent;
+    font-size: 20px;
+
+}
+
+.links>a{
+    font-size: 12px;
+    &.active,&:hover{
+        color: $font-accent;
+    }
+    
+    
+}
+.modal-window{
+    position: fixed;
+    right: 0;
+    margin: auto;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $font-light;
+    box-shadow: 0px  0px 50px rgba(0, 0, 0,.3);
+    z-index: 99;
+}
+
+.button-submit{
+    background-color: $font-normal;
+    color: $font-light;
+    padding: 35px 65px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: all .3s ease;
+    &:hover{
+        opacity: .8;
+    }
+}
+
+.form{
+    input{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid $font-normal;
+        transition: all .3s ease;
+        &::placeholder{
+            color: $font-normal;
+            opacity: .5;
+        }
+        &:focus{
+            border-bottom: 1px solid $font-light;
+            color: $font-light;
+            &::placeholder{
+                color: $font-light;
+
+            }
+        }
+    }
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active до версии 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }
